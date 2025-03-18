@@ -3,7 +3,7 @@ import { Box, Stepper, Step, StepLabel, Button, TextField, Typography, MenuItem,
 import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '/styles/ProjectDetail.css?url';
+import './ProjectDetail.css'; // Corrected import statement
 import { AppContext } from '../../context/AppContext';
 import { useContext } from 'react';
 
