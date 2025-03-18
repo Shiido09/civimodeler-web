@@ -5,9 +5,11 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "concurrently \"node server.js\" \"python ./python/train_model.py\"",
+    "train": "cd python && python train_model.py",
+    "start": "concurrently \"cd python && python train_model.py\" \"node server.js\"",
     "dev": "nodemon server.js",
-    "download-threejs": "node utils/downloadThreeJs.js"
+    "download-threejs": "node utils/downloadThreeJs.js",
+    "postinstall": "chmod +x ./node_modules/.bin/*"
   },
   "author": "",
   "license": "ISC",
